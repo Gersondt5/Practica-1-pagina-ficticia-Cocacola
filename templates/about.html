@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Coca-Cola - Quiénes Somos {% endblock %}
+
+{% block content %}
+<h1>Quiénes Somos</h1>
+<p>En Coca-Cola, hemos estado refrescando al mundo desde 1886 con nuestras bebidas.</p>
+
+<h2>Misión</h2>
+<p>Nuestra misión es ofrecer momentos de felicidad refrescante a las personas de todo el mundo.</p>
+
+<h2>Visión</h2>
+<p>Ser la empresa de bebidas más admirada y respetada del planeta.</p>
+
+<h2>Equipo de Trabajo</h2>
+<p>Nuestro equipo está compuesto por profesionales apasionados que trabajan juntos para ofrecer la mejor experiencia a nuestros consumidores.</p>
+<div class="team">
+    <img src="{{ url_for('static', filename='equipo de trabajo.jpg') }}" alt="equipo de trabajo" style="width: 400px; height: auto;">
+</div>
+
+{% endblock %}

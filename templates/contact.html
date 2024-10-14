@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Coca-Cola - Contacto {% endblock %}
+
+{% block content %}
+<h1>Contacto</h1>
+<form method="POST" action="/contact">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Mensaje:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<h2>Ubicación</h2>
+<p>Dirección ficticia: Centro Empresarial Equipetrol Torre Alas Piso 9, Ciudad: Santa Cruz, País: Bolivia</p>
+<iframe src="https://www.google.com/maps/embed" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Coca-Cola - Servicios {% endblock %}
+
+{% block content %}
+<h1>Nuestros Servicios</h1>
+<div class="service">
+    <img src="{{ url_for('static', filename='cocacola.jpg') }}" alt="Servicio 1" style="width: 400px; height: auto;">
+    <h2>Distribución Global</h2>
+    <p>Ofrecemos distribución de bebidas en todo el mundo, garantizando que Coca-Cola llegue a todos los rincones.</p>
+</div>
+<div class="service">
+    <img src="{{ url_for('static', filename='envios.jpg') }}" alt="Servicio 2" style="width: 400px; height: auto;">
+    <h2>Innovación en Bebidas</h2>
+    <p>Desarrollamos constantemente nuevas bebidas y sabores para satisfacer todos los gustos.</p>
+    <img src="{{ url_for('static', filename='bebidas.jpg') }}" alt="Servicio 3" style="width: 400px; height: auto;">
+</div>
+{% endblock %}

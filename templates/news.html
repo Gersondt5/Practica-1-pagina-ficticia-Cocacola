@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Coca-Cola - Noticias {% endblock %}
+
+{% block content %}
+<h1>Últimas Noticias</h1>
+<div class="news-item">
+    <h2>Nueva bebida lanzada en América Latina</h2>
+    <img src="{{ url_for('static', filename='fanta misterio.jpg') }}" alt="Noticia 1" style="width: 400px; height: auto;">
+    <p>Hemos lanzado una nueva bebida refrescante con un sabor misterioso.</p>
+</div>
+<div class="news-item">
+    <h2>Compromiso con el reciclaje</h2>
+    <img src="{{ url_for('static', filename='reciclaje.jpg') }}" alt="Noticia 2" style="width: 400px; height: auto;">
+    <p>Coca-Cola reafirma su compromiso con el medio ambiente mediante nuevas políticas de reciclaje.</p>
+</div>
+{% endblock %}

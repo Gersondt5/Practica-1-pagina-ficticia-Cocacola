@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Coca-Cola - Inicio {% endblock %}
+
+{% block content %}
+<h1>Bienvenidos a Coca-Cola</h1>
+<p>Disfruta de nuestra bebida refrescante y nuestros nuevos productos innovadores.</p>
+
+<h2>Testimonios</h2>
+{% if testimonios %}
+    <ul>
+        {% for testimonio in testimonios %}
+            <li>
+                <strong>{{ testimonio.name }}</strong>: "{{ testimonio.message }}"
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay testimonios aún. Sé el primero en dejar uno.</p>
+{% endif %}
+
+<h3>Añadir un nuevo testimonio</h3>
+<form method="POST" action="/">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="message">Testimonio:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<h2>Síguenos en nuestras redes sociales</h2>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">Twitter</a>
+{% endblock %}
